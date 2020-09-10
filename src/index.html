@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMASH IT WEATHER APP</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/48ed23c46e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="container-fluid">
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </span>
+      <a class="logo" href="#"><p>WeatherApp</p></a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a class="nav-links" href="#">Forecasts</a>
+        </li>
+        <li>
+          <a class="nav-links" href="#">Maps</a>
+        </li>
+        <li>
+          <a class="nav-links" href="#">Alerts</a>
+        </li>
+        <li>
+          <a class="nav-links" href="#">Life</a>
+        </li>
+        <li>
+          <a class="nav-links" href="#">News & Videos</a>
+        </li>
+        <div class="clear"></div>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="search-box-wrap">
+    <input type="search" class="search-box" autocomplete="off" placeholder="Search for your city...">
+    <button class="search-btn"><i class="fas fa-search"></i></button>
+  </section>
+
+  <main class="container display-none">
+    <section class="current-weather">
+      <p class="city">London, GB</p>
+      <time class="time">Sep 09, 2020 12:22 PM</time>
+      <div class="icon-temp">
+        <p class="temperature">71°C</p>
+        <span class="icon">icon</span>
+      </div>
+      <div class="feel-description">
+        <p>Feels like <span class="feels-like">73°</span></p>
+        <p class="description">Heavy intensity rain</p>
+      </div>
+    </section>
+  
+    <section class="main-weather-details">
+      <p>Rain <span class="rain"> 13.77</span></p>
+      <p>Pressure <span class="pressure">1011</span></p>
+      <p>Humidity <span class="humidity">98</span></p>
+      <p>Wind <span class="wind">2.86</span></p>
+    </section>
+
+    <section class="next-weather-details">
+      <p>Sunrise <span class="sunrise">1599629636</span></p>
+      <p>Sunset <span class="sunset">1599673612</span></p>
+      <p>Ground-level <span class="grnd-level">973</span></p>
+      <p>Sea-level <span class="sea-level">1011</span></p>
+    </section>
+  </main>
+
+
+<script src="index.js"></script>
+</body>
+</html>
+
+
+
+
