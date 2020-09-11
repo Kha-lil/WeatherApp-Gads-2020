@@ -62,14 +62,14 @@ function displayResults (weather) {
     document.querySelector('.temperature').textContent = `${Math.round(weather.main.temp)} °C`;
     document.querySelector('.feels-like').textContent = `${Math.round(weather.main.feels_like)}°`;
     document.querySelector('.description').textContent = weather.weather[0].description;
-    document.querySelector('.rain').textContent = weather.rain
+    document.querySelector('.hi-low').textContent = `${Math.round(weather.main.temp_max)}°/${Math.round(weather.main.temp_min)}°`
+    document.querySelector('.cloud').textContent = `${weather.clouds.all}%`;
     document.querySelector('.pressure').textContent = weather.main.pressure;
     document.querySelector('.humidity').textContent = `${weather.main.humidity}%`;
-    document.querySelector('.wind').textContent = weather.wind.speed;
+    document.querySelector('.wind').textContent = `${Math.round(weather.wind.speed)} m/s`;
+    document.querySelector('.visibility').textContent = `${weather.visibility}m`;
     document.querySelector('.sunrise').textContent = weather.sys.sunrise;
     document.querySelector('.sunset').textContent = weather.sys.sunset;
-    document.querySelector('.grnd-level').textContent = weather.main.grnd_level;
-    document.querySelector('.sea-level').textContent = weather.main.sea_level;
 }
 
 function dateBuilder (d) {

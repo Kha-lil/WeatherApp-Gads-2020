@@ -7,6 +7,12 @@
     overflow: auto;
 }
 
+svg{
+    width: 1.5rem;
+    color: white;
+    
+}
+
 html, body{
     height: 100%;
     overflow-y: scroll;
@@ -18,7 +24,7 @@ html, body{
 }
 
 body {
-    /* background: #1900d2; */
+    /* background: #1900d2 #251284; */
     /* https://images.unsplash.com/photo-1514632595-4944383f2737?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80 */
     /* https://images.unsplash.com/photo-1555588746-13edde80e4a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80 */
     background-image: url(https://images.unsplash.com/photo-1489515217757-5fd1be406fef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
@@ -140,9 +146,9 @@ button {
     }
 }
 
-/* main.container{
-    margin-top: 2rem;
-} */
+div.container{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
 
 .display-none{
     display: none;
@@ -161,7 +167,7 @@ section.main-weather-details,
 section.next-weather-details{
     display: flex;
     color: white;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
     flex-flow: column;
     margin: 2rem 1rem;
     border-radius: .5rem;
@@ -202,6 +208,10 @@ time{
     justify-content: space-between;
 }
 
+section > div {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
