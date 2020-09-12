@@ -4,7 +4,7 @@ let searchBox = document.querySelector('.search-box');
 let searchBtn = document.querySelector('.search-btn');
 
 
-//let weatherPromise;
+
 let weather;
 
 let api = 'https://api.openweathermap.org/data/2.5/weather?q=';
@@ -59,7 +59,9 @@ function getResults(url) {
 function displayResults (weather) {
     document.querySelector('.city').textContent = `${weather.name}, ${weather.sys.country}`;
     document.querySelector('time').textContent = dateBuilder(new Date());
-    document.querySelector('.temperature').textContent = `${Math.round(weather.main.temp)} °C`;
+    document.querySelector('.temperature').textContent = `${Math.round(weather.main.temp)}°C`;
+    //mainIconDisplay();
+    //document.querySelector('.main-icon').textContent = `<img src="https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png" alt="${ weather.weather[0].description}">`;
     document.querySelector('.feels-like').textContent = `${Math.round(weather.main.feels_like)}°`;
     document.querySelector('.description').textContent = weather.weather[0].description;
     document.querySelector('.hi-low').textContent = `${Math.round(weather.main.temp_max)}°/${Math.round(weather.main.temp_min)}°`
@@ -71,6 +73,14 @@ function displayResults (weather) {
     document.querySelector('.sunrise').textContent = weather.sys.sunrise;
     document.querySelector('.sunset').textContent = weather.sys.sunset;
 }
+
+/* function mainIconDisplay () {
+    let targetEl = document.querySelector('.temperature');
+    let mainIcon = document.createElement('img').setAttribute("class", "main-icon");
+    mainIcon.setAttribute("src", `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
+    mainIcon.setAttribute("alt", `${ weather.weather[0].description}`);
+    targetEl.parentNode.insertBefore (mainIcon, targetEl.nextSibling);
+} */
 
 function dateBuilder (d) {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
